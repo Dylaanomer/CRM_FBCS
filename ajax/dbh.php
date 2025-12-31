@@ -1,4 +1,8 @@
 <?php
+
+// At the very top of dbh.php (helpful during development)
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
 $mysqlserver = "localhost";  // Changed from "wf.mariadb"
 $mysqluser = "root";          // Changed from "fbcs_nl"
 $mysqlpass = "";              // Changed from "763c1a02122f" (XAMPP default is empty)
