@@ -2,7 +2,7 @@
 $mysqlserver = "localhost";  // Changed from "wf.mariadb"
 $mysqluser = "root";          // Changed from "fbcs_nl"
 $mysqlpass = "";              // Changed from "763c1a02122f" (XAMPP default is empty)
-$mysqldb = "fbcs.nl_crm_PHP"; // Keep the same database name
+$mysqldb = "fbcs.nl_licenties_PHP"; // Changed to match root dbh
 
 $conn = new mysqli($mysqlserver, $mysqluser, $mysqlpass, $mysqldb);
 if ($conn->connect_error) {

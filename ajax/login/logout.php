@@ -13,8 +13,8 @@ if (!$result = $conn->query($sql)) {
 
 //remove current cookies
 $path = '/';
-$domain = 'licenties.fbcs.nl';
-$secure = true;
+$domain = '';
+$secure = false;
 
 setcookie("name", "", time()-3600, $path, $domain, $secure);
 setcookie("uuid", "", time()-3600, $path, $domain, $secure);

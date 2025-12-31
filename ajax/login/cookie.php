@@ -27,8 +27,8 @@ function checkLoginCookie() {
     $now = $now->format("Y-m-d h:i:s");
 
     $path = '/';
-    $domain = 'licenties.fbcs.nl';
-    $secure = true;
+    $domain = '';
+    $secure = false;
     
     //check if the cookie has expired
     if ($row["session"] === "1") {
