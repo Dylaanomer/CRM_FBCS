@@ -54,6 +54,16 @@ require 'ajax/login/cookie.php';
 	<div id="popup"> </div>
 </div>
 
+<div id="center">
+	<div id="usecodediv"> 
+		<div class="usecode">
+			<label for="type">Product</label>
+			<select name="type" id="usecodetype"></select>
+			<span id="codesleft"></span>
+			<button id="usecode">Gebruik Code</button>
+		</div>
+	</div>
+
 
 	<div id="filter">
 		<div class="filter-search">
@@ -75,8 +85,9 @@ require 'ajax/login/cookie.php';
 
 	<div id="codes">
 		<div class="codes-header">
-			<div>PC Model Naam</div>
+			<div>Code</div>
 			<div>Klant</div>
+			<div>PC</div>
 			<div>Datum</div>
 		</div>
 		<div> <div> laden... </div> </div>
