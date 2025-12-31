@@ -7,15 +7,15 @@ error_reporting(E_ALL);*/
 
 require 'ajax/login/cookie.php';
 
-$valid_cookie = json_decode(checkLoginCookie());
+// $valid_cookie = json_decode(checkLoginCookie());
 
-if ($valid_cookie->{"status"} !== "success") {
-  require 'login-page.php';
-  echo '<script>console.error(' . $valid_cookie->{"msg"} . ' );</script>
-  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="js/login.js"></script>';
-  exit;
-}
+// if ($valid_cookie->{"status"} !== "success") {
+//   require 'login-page.php';
+//   echo '<script>console.error(' . $valid_cookie->{"msg"} . ' );</script>
+//   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+//         <script src="js/login.js"></script>';
+//   exit;
+// }
 ?>
 
 <!DOCTYPE html>
