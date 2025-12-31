@@ -21,7 +21,7 @@ if ($valid_cookie->{"status"} !== "success") {
 <!DOCTYPE html>
 <html>
 <head>
-<title> Avast Codes </title> 
+<title>CRM FBCS</title> 
 <link rel="icon" type="image/png" href="img/favicon.png">
 <!-- STYLESHEETS -->
 <link rel="stylesheet" type="text/css" href="css/shared.css">
@@ -41,11 +41,11 @@ if ($valid_cookie->{"status"} !== "success") {
 <div id="nav">
 	<a class="nav" href="index.php"> <img src="img/fbcs.png" alt="kan het bestand niet vinden" id="logo"/> </a>
 	<ul class="nav">
-		<li class="nav"> <a class="nav active" href="index.php"> Codes </a> </li>
-		<li class="nav"> <a class="nav" href="avast-old.php"> Avast oud </a> </li>
-		<li class="nav"> <a class="nav" href="office-old.php"> Office oud </a> </li>
+		<li class="nav"> <a class="nav active" href="index.php"> Onderhoud </a> </li>
+		<li class="nav"> <a class="nav" href="avast-old.php"> Nieuwe PC klaarmaken </a> </li>
+		<li class="nav"> <a class="nav" href="office-old.php"> Overige Zaken </a> </li>
 		<li> <div class="login"> Welkom, <?php echo htmlspecialchars($_COOKIE["name"]); ?> <br>
-			<a id="logout" class="login" href="login/logout.php">Log uit</a>
+			<a id="logout" class="login" href="login/logout.php">Uitloggen</a>
 			</li>
 	</ul>
 </div>
@@ -54,15 +54,6 @@ if ($valid_cookie->{"status"} !== "success") {
 	<div id="popup"> </div>
 </div>
 
-<div id="center">
-	<div id="usecodediv"> 
-		<div class="usecode">
-			<label for="type">Product</label>
-			<select name="type" id="usecodetype"></select>
-			<span id="codesleft"></span>
-			<button id="usecode">Gebruik Code</button>
-		</div>
-	</div>
 
 	<div id="filter"> 
 		<div class="filter-search">
@@ -70,26 +61,28 @@ if ($valid_cookie->{"status"} !== "success") {
 		</div>
 		<div class="filter-type">
 			<input type="radio" id="avast" name="type" value="avast" checked>
-			<label for="avast">Avast</label><br/>
+			<label for="avast">Windows</label><br/>
 			<input type="radio" id="office" name="type" value="office">
-			<label for="office">Office</label>
+			<label for="office">Macbook</label>
+			<input type="radio" id="anderen" name="type" value="anderen">
+			<label for="anderen">Anderen</label><br/>
+
 		</div>
 		<div class="filter-add">
-			<button id="newcode">Code Toevoegen</button>
+			<button id="newcode">Nieuwe Onderhoud</button>
 		</div>
 	</div>
 
 	<div id="codes">
 		<div class="codes-header">
-			<div>Code</div>
+			<div>PC Model Naam</div>
 			<div>Klant</div>
-			<div>PC</div>
 			<div>Datum</div>
 		</div>
 		<div> <div> laden... </div> </div>
 	</div>
 
-<button id="loadmore"> Laad meer codes </button>
+<button id="loadmore"> Laad meer Onderhoudjes </button>
 
 <!---	<h1> Verwijder code uit database </h1>
 	<form method="post">
@@ -98,10 +91,6 @@ if ($valid_cookie->{"status"} !== "success") {
 	</form>-->
 </div>
 
-<div id="footer">
-	Developed by Luc
-</div>
-</body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/main.js"></script>
