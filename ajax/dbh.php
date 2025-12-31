@@ -1,12 +1,10 @@
 <?php
-$mysqlserver = "wf.mariadb";
-$mysqluser = "fbcs_nl";
-$mysqlpass = "763c1a02122f";
-$mysqldb = "fbcs.nl_crm_PHP";
-
+$mysqlserver = "localhost";  // Changed from "wf.mariadb"
+$mysqluser = "root";          // Changed from "fbcs_nl"
+$mysqlpass = "";              // Changed from "763c1a02122f" (XAMPP default is empty)
+$mysqldb = "fbcs.nl_crm_PHP"; // Keep the same database name
 
 $conn = new mysqli($mysqlserver, $mysqluser, $mysqlpass, $mysqldb);
-
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -26,5 +24,4 @@ function echoResponse($status, $msg) {
     }
     exit;
 }
-
 ?>
