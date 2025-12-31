@@ -21,7 +21,7 @@ if ($valid_cookie->{"status"} !== "success") {
 <!DOCTYPE html>
 <html>
 <head>
-<title>CRM FBCS</title> 
+<title>CRM FBCS</title>
 <link rel="icon" type="image/png" href="img/favicon.png">
 <!-- STYLESHEETS -->
 <link rel="stylesheet" type="text/css" href="css/shared.css">
@@ -55,7 +55,7 @@ if ($valid_cookie->{"status"} !== "success") {
 </div>
 
 
-	<div id="filter"> 
+	<div id="filter">
 		<div class="filter-search">
 			<input type="text" id="search-code" name="search" class="search" placeholder="Zoeken">
 		</div>

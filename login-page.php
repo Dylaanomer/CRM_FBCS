@@ -13,7 +13,7 @@
 
       <label for="username"> Gebruiker </label>
       <input id="username" type="text" name="username" autofocus>
-      
+
       <label for="password"> Wachtwoord </label>
       <input id="password" type="password" name="password"><br/>
 

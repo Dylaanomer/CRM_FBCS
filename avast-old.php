@@ -1,16 +1,16 @@
 <?php
-  
+
 require 'ajax/login/cookie.php';
-  
+
 $valid_cookie = json_decode(checkLoginCookie());
-  
+
 if ($valid_cookie->{"status"} !== "success") {
 	require 'login-page.php';
 	echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		  <script src="js/login.js"></script>';
 	exit;
 }
-  
+
 include 'dbh.php';
 
 $search = $_POST["search"];
@@ -18,7 +18,7 @@ $search = $_POST["search"];
 if(isset($_POST["zoek"])) {
 	$sql = "SELECT code, type, klant, datein, dateout FROM avast_oud WHERE klant LIKE '%$search%' ORDER BY dateout DESC LIMIT 50;";
 	$result = $conn->query($sql);
-	
+
 } else {
 	$sql = "SELECT code, type, klant, datein, dateout FROM avast_oud ORDER BY dateout DESC LIMIT 50;";
 	$result = $conn->query($sql);
@@ -29,7 +29,7 @@ if(isset($_POST["zoek"])) {
 <!DOCTYPE html>
 <html>
 <head>
-<title> Oude Avast Codes </title> 
+<title> Oude Avast Codes </title>
 <link rel="icon" type="image/png" href="img/favicon.png">
 <!-- STYLESHEETS -->
 <link rel="stylesheet" type="text/css" href="css/shared.css">
@@ -56,26 +56,26 @@ if(isset($_POST["zoek"])) {
 
 <div id="center">
 <p class="green"> <?php echo $succes ?> </p>
-<form method="post" class="form1"> 
+<form method="post" class="form1">
 		<h1> Zoeken </h1>
 			<ul>
 				<li>
 					<input class="forcode field-style" maxlength="50" type="text" name="search" placeholder="Zoeken" required /> 
-				</li><li>	
+				</li><li>
 					<input type="submit" name="zoek" value="Zoeken" />
 				</li>
 			</ul>
 		</form>
 <table>
-	
+
 	<colgroup>
     <col style="width:40%">
     <col style="width:10%">
     <col style="width:30%">
     <col style="width:10%">
     <col style="width:10%">
-	</colgroup> 
-	
+	</colgroup>
+
 	<tr>
 		<th>Code</th>
 		<th>Type</th>
@@ -83,30 +83,30 @@ if(isset($_POST["zoek"])) {
 		<th>Gekocht</th>
 		<th>Gebruikt</th>
 	</tr>
-	
+
 	<?php
 
 		if ($result->num_rows > 0) {
 			// output data of each row
 			while($row = $result->fetch_assoc()) {
-				echo '<tr><td> 
+				echo '<tr><td>
 						<div class="bold padding"> ' . $row["code"]. ' </div>
-						</td><td> 
+						</td><td>
 						<div class="padding">' . $row["type"]. ' </div>
-						</td><td> 
+						</td><td>
 						<div class="padding">' . $row["klant"]. ' </div>
-						</td><td> 
+						</td><td>
 						<div class="padding">' . $row["datein"]. ' </div>
-						</td><td> 
+						</td><td>
 						<div class="padding">' . $row["dateout"]. ' </div>
 					</td></tr>';
 			}
 			echo "</table>";
-		} else { 
-			echo "0 results"; 
+		} else {
+			echo "0 results";
 		}
 		$conn->close();
-	
+
 ?>
 
 </div>
