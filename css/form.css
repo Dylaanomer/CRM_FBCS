@@ -1,0 +1,195 @@
+/*.form1{
+	max-width: 700px;
+	background: #FAFAFA;
+	padding: 0px 20px 5px 20px;
+	margin: 30px auto;
+	box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+	border-radius: 10px;
+	border: 6px solid #305A72;
+}
+.form1 ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+.form1 ul li{
+	display: block;
+	margin-bottom: 10px;
+	min-height: 35px;
+}
+.form1 ul li  .field-style{
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	padding: 8px;
+	outline: none;
+	border: 1px solid #B0CFE0;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+
+.form-style-9 ul li  .field-style{
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	padding: 8px;
+	outline: none;
+	border: 1px solid #B0CFE0;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+
+}.form-style-9 ul li  .field-style:focus{
+	box-shadow: 0 0 5px #B0CFE0;
+	border:1px solid #B0CFE0;
+}
+}
+.form1 ul li .forsplit{
+	width: 30%;
+}
+.form1 ul li .forcode{
+	width: 79%;
+}
+.form1 ul li .forcodetype{
+	width: 19%;
+}
+.form1 ul li .foraanhef{
+	width: 10%;
+}
+.form1 ul li .forpctype{
+	width: 12%;
+}
+.form1 ul li .foruser{
+	width: 24%;
+}
+.form1 ul li .forpc{
+	width: 27%;
+}
+.form1 ul li input.align-left{
+	float:left;
+}
+.form1 ul li input.align-right{
+	float:right;
+}
+.form1 ul li textarea{
+	width: 100%;
+	height: 100px;
+}
+.form1 ul li input[type="button"], 
+.form1 ul li input[type="submit"] {
+	-moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
+	box-shadow: inset 0px 1px 0px 0px #3985B1;
+	background-color: #284c66;
+	border: 1px solid #17445E;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	padding: 8px 18px;
+	text-decoration: none;
+	font: 12px Arial, Helvetica, sans-serif;
+}
+.form1 ul li input[type="button"]:hover, 
+.form1 ul li input[type="submit"]:hover {
+	background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
+	background-color: #0c3a50;
+}*/
+
+button {
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 0;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #232323; 
+  border: 2px solid #008CBA;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 2px solid #008CBA;
+  background-color: #232323;
+  color: white;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="radio"] {
+	width: unset;
+}
+
+.green-bg {
+	background-color: green;
+}
+
+.red-bg {
+	background-color: red;
+}
+
+/* remove white line from last clicked form items */
+:focus {
+  outline: none;
+  background-color: #282828;
+  transition: .3s;
+}
+
+/* CALENDAR FIX */
+
+input[type="date"] {
+  position: relative;
+}
+
+/* create a new arrow, because we are going to mess up the native one
+see "List of symbols" below if you want another, you could also try to add a font-awesome icon.. */
+input[type="date"]:after {
+  content: "\25BC"; 
+  color: #555;
+  padding: 0 5px;
+}
+
+/* change color of symbol on hover */
+input[type="date"]:hover:after {
+  color: #c7c7c7;
+}
+
+/* make the native arrow invisible and stretch it over the whole field so you can click anywhere in the input field to trigger the native datepicker*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background: transparent;
+}
+
+/* adjust increase/decrease button */
+input[type="date"]::-webkit-inner-spin-button {
+  z-index: 1;
+}
+
+/* adjust clear button */
+input[type="date"]::-webkit-clear-button {
+   z-index: 1;
+}

@@ -1,0 +1,52 @@
+#codes {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-family: 'Blinker', sans-serif;
+  font-size: 1.2rem;
+  color: black;
+  background-color: #ededed;
+}
+
+#codes div {
+  display: flex;
+  flex-direction: row;
+  height: 3rem;
+  border: 1px;
+	border-style: solid;
+  border-color: #0c3a50;
+  align-items: center;
+  cursor: pointer;
+}
+
+#codes div div {
+  padding-left: 10px;
+  width: 100%;
+  border: unset;
+  overflow: hidden;
+}
+
+.codes-header {
+  background-color: #0c3a50;
+	color: white;
+}
+
+.codes-even {
+  background-color: #cfdbe0;
+}
+
+/* type column doesn't need to be that wide */
+.tabletype {
+  width: 50% !important;
+  min-width: 10rem;
+}
+
+/* date can be a lot shorter */
+#codes div div:last-child {
+  width: 30%;
+  min-width: 6.5rem;
+}
+
+#codes div:first-child {
+  cursor: text;
+}

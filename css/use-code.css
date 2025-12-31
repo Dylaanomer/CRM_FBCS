@@ -1,0 +1,32 @@
+#usecodediv {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  background-color: #0c3a50;
+  color: white;
+  padding: .2rem;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+#codesleft {
+  margin-right: 1.5rem;
+  font-size: 1.7rem;
+}
+
+.usecode {
+  flex-grow: 1;
+  font-size: 1.3rem;
+  font-family: 'Blinker', sans-serif;
+}
+
+.usecode label {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.usecode select {
+  width: 20%;
+  margin: 1.5rem;
+  margin-right: .2rem;
+}

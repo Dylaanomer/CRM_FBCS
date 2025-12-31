@@ -1,0 +1,118 @@
+#popupBG {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(128, 128, 128, 0.452);
+  display: none;
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+#popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 60vw;
+  height: 70vh;
+  max-width: 800px;
+  overflow: auto;
+  z-index: 999;
+  background-color: #0c3a50;
+  padding: 3rem;
+  border-radius: 2rem;
+  border: 3px #008CBA solid;
+  color: white;
+  font-size: 1.3rem;
+  font-family: 'Blinker', sans-serif;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: .6s;
+  animation-name: slideIn;
+  animation-duration: .6s
+}
+
+#close {
+  position: inherit;
+  font-size: 200%;
+  cursor: pointer;
+  display: inline-block;
+  right: 15px;
+  top: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 0px 7px;
+  transition: .4s;
+}
+
+#editcode {
+  cursor: pointer;
+}
+
+.popuptitle {
+  font-size: 200%;
+  text-align: center;
+  border-bottom: 5px solid white;
+  border-radius: 3px;
+  width: 34%;
+  margin-bottom: 3vh;
+  margin-left: 32%;
+  padding-bottom: 10px;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 7rem auto;
+  grid-template-rows: auto;
+}
+
+.gegevens {
+  display: grid;
+  grid-template-columns: 7rem 20% 1rem auto;
+  grid-template-rows: auto;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin-top: 1rem;
+}
+
+.options p, .gegevens p {
+  font-weight: 800;
+}
+
+.options p {
+  width: 20%;
+}
+
+@-webkit-keyframes slideIn {
+  from {bottom: 500px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: 500px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@media  (max-aspect-ratio: 1/1) {
+  #popup {width: 90vw; height: 35vh;}
+}

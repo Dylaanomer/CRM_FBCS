@@ -1,0 +1,29 @@
+#filter {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  background-color: #0c3a50;
+  color: white;
+  padding: .2rem;
+  padding: 1rem 0;
+}
+
+.filter-search {
+  min-width: 300px;
+  flex-grow: 2;
+}
+
+.filter-type {
+  text-align: left;
+  padding-left: 2rem;
+  flex-grow: 1;
+}
+
+.filter-add {
+  float: right;
+  flex-grow: 1;
+}
+
+.search {
+  width: 90%;
+}
