@@ -7,15 +7,15 @@ error_reporting(E_ALL);*/
 
 require 'ajax/login/cookie.php';
 
-$valid_cookie = json_decode(checkLoginCookie());
+// $valid_cookie = json_decode(checkLoginCookie());
 
-if ($valid_cookie->{"status"} !== "success") {
-  require 'login-page.php';
-  echo '<script>console.error(' . $valid_cookie->{"msg"} . ' );</script>
-  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="js/login.js"></script>';
-  exit;
-}
+// if ($valid_cookie->{"status"} !== "success") {
+//   require 'login-page.php';
+//   echo '<script>console.error(' . $valid_cookie->{"msg"} . ' );</script>
+//   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+//         <script src="js/login.js"></script>';
+//   exit;
+// }
 ?>
 
 <!DOCTYPE html>
@@ -54,6 +54,13 @@ if ($valid_cookie->{"status"} !== "success") {
 	<div id="popup"> </div>
 </div>
 
+<div id="center">
+	<div id="usecodediv"> 
+		<div class="usecode">
+			<label for="type">Product</label>
+		</div>
+	</div>
+
 
 	<div id="filter">
 		<div class="filter-search">
@@ -69,14 +76,17 @@ if ($valid_cookie->{"status"} !== "success") {
 
 		</div>
 		<div class="filter-add">
-			<button id="newcode">Nieuwe Onderhoud</button>
+			<select name="type" id="usecodetype"></select>
+			<button id="usecode">Nieuwe Onderhoud</button>
+			<button id="newcode">Nieuwe PC klaarmaken</button>
 		</div>
 	</div>
 
 	<div id="codes">
 		<div class="codes-header">
-			<div>PC Model Naam</div>
+			<div>Code</div>
 			<div>Klant</div>
+			<div>PC</div>
 			<div>Datum</div>
 		</div>
 		<div> <div> laden... </div> </div>

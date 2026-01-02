@@ -46,32 +46,45 @@ $(document).on('input', '.newcodeinput', function() {
 let renderNewCode = () => {
   if (showPopup) {
     let form = `<div id="close"><span role="img" aria-label="close">&#x2716;</span></div>
-                <div class="popuptitle">Nieuwe Code</div>
+                <div class="popuptitle">Checklist nieuwe apparaten</div>
                 <div class="options">
-                  <p>Code</p>
-                  <input type="text" name="code" class="newcodeinput" placeholder="Code">
-                  <p>Product</p>
-                  <input type="text" name="type" list="producttype" class="newcodeinput">
-                  <datalist id="producttype" >
-                    <option value="Avast Pro"> Avast Pro </option>
-                    <option value="Office H&S 2019"> Office H&S 2019 </option>
-                    <option value="Office H&B 2019"> Office H&B 2019 </option>
-                    <option value="Office Pro Plus 2019"> Office Pro Plus 2019 </option>
-                    <option value="Office H&S 2016"> Office H&S 2016 </option>
-                    <option value="Office H&B 2016"> Office H&B 2016 </option>
-                    <option value="Office Pro Plus 2016"> Office Pro Plus 2016 </option>
-                    <option value="Office H&S 2013"> Office H&S 2013 </option>
-                    <option value="Office H&B 2013"> Office H&B 2013 </option>
-                    <option value="Office Pro Plus 2013"> Office Pro Plus 2013 </option>
-                    <option value="Office 365 1 PC 1 jaar"> Office 365 1 PC 1 jaar </option>
-                  </datalist>                  <p>Ingekocht</p> 	
-                  <input type="date" name="datein" class="newcodeinput" value="${today}"/>
-                  <p>Aantal</p> 	
-                  <input type="number" name="aantal" class="newcodeinput" value="1"/>
-                  <p>Initiaal</p>
+                  <div class="checkboxes">
+        <label><input type="checkbox" name="winver"> Windows versie geinstalleerd</label>
+        <label><input type="checkbox" name="regedit"> Regedit uitgevoerd</label>
+        <label><input type="checkbox" name="antivirus"> Antivirus geinstalleerd</label>
+        <label><input type="checkbox" name="office"> Office geinstalleerd</label>
+        <label><input type="checkbox" name="herstelpunt"> Herstelpunt aangemaakt</label>
+        <label><input type="checkbox" name="CCleanerMBAMKRVTAdwCleaner"> CCleaner, MBAM, KRVT, AdwCleaner geinstalleerd</label>
+        <label><input type="checkbox" name="energiebeheer"> Energiebeheer ingesteld</label>
+        <label><input type="checkbox" name="winactivated"> Windows geactiveerd</label>
+        <label><input type="checkbox" name="avastinstellingen"> Avast instellingen gedaan</label>
+        <label><input type="checkbox" name="Schijfopslag"> Schijfopslag geoptimaliseerd</label>
+        <label><input type="checkbox" name="partitiesnaamSDDHDD"> Partities hernoemd (SSD/HDD)</label>
+        <label><input type="checkbox" name="openshell"> Open-Shell geinstalleerd</label>
+        <label><input type="checkbox" name="FBCSSupremobureablad"> FBCS Supremobureablad ingesteld</label>
+        <label><input type="checkbox" name="Updates"> Alle updates uitgevoerd</label>
+        <label><input type="checkbox" name="Wifi6Settings"> Wifi 6 instellingen gedaan</label>
+        <label><input type="checkbox" name="DeliveryOptimization"> Delivery Optimization ingesteld</label>
+        <label><input type="checkbox" name="VeamAgent"> Veam Agent geinstalleerd</label>
+        <label><input type="checkbox" name="SchijfopruimingUitgevoerd"> Schijfopruiming uitgevoerd</label>
+        <label><input type="checkbox" name="FBCSOpstartMap"> FBCS Opstart Map ingesteld</label>
+        <label><input type="checkbox" name="ChromeFirefoxEdge"> Chrome, Firefox, Edge geinstalleerd</label>
+        <label><input type="checkbox" name="CoolerCleaning"> Koeler schoongemaakt</label>
+
+         <p>Initiaal</p>
                   <select name="initiaal" class="newcodeinput"> 
                     ` + userOptions + `
                   </select>
+
+         <div class="notities">
+                  <p> Notities </p>
+                  <textarea name="Notities" class="newcodeinput" placeholder="Notities"></textarea>
+      
+                </div>         
+      </div>
+              
+                
+      
                 </div>
                 <div class="buttons">
                   <button id="toevoegen">Toevoegen</button>

@@ -46,14 +46,8 @@ let renderUseCode = info => {
   if (showPopup) {
     let form = `
     <div id="close"><span role="img" aria-label="close">&#x2716;</span></div>
-      <div class="popuptitle">Gebruik Code</div>
+      <div class="popuptitle">Checklist werkzaamheden computer</div>
       <div class="options">
-        <p>Code</p>
-        <input type="text" name="code" class="gegevensinput" value="${info.code.slice(0, -2)}" readonly>
-        <p>Product</p>
-        <input type="text" name="type" class="gegevensinput" value="${info.type}" readonly>
-        <p>Ingekocht</p> 	
-        <input type="date" name="datein" class="gegevensinput" value="${info.datein}" readonly>
       </div>
       <div class="gegevens">
         <p> Naam </p>
@@ -68,20 +62,66 @@ let renderUseCode = info => {
         <p> PC </p>
         <select name="pctype" class="gegevensinput"> 
           <option value="Laptop">Laptop</option>
-          <option value="Kast">Kast</option>
-          <option value="AIO">AIO</option>
+          <option value="Kast">PC</option>
+          <option value="AIO">Macbook</option>
           </select>
         <div/>
         <input type="text" name="pc" class="gegevensinput" placeholder="PC""> 
       </div>
+    
+
+      <div class="checkboxes">
+        <label><input type="checkbox" name="winver"> Windows versie geinstalleerd</label>
+        <label><input type="checkbox" name="regedit"> Regedit uitgevoerd</label>
+        <label><input type="checkbox" name="antivirus"> Antivirus geinstalleerd</label>
+        <label><input type="checkbox" name="office"> Office geinstalleerd</label>
+        <label><input type="checkbox" name="herstelpunt"> Herstelpunt aangemaakt</label>
+        <label><input type="checkbox" name="CCleanerMBAMKRVTAdwCleaner"> CCleaner, MBAM, KRVT, AdwCleaner geinstalleerd</label>
+        <label><input type="checkbox" name="energiebeheer"> Energiebeheer ingesteld</label>
+        <label><input type="checkbox" name="winactivated"> Windows geactiveerd</label>
+        <label><input type="checkbox" name="avastCodeActivation"> Avast code geactiveerd</label>
+        <br>
+        <small>
+        <a href="https://licenties.fbcs.nl" target="_blank" style="color: black; font-weight: bold; text-decoration: none;"> Link Website voor Avast code activatie</a>
+        </small>
+        <br>
+        <label><input type="checkbox" name="avastinstellingen"> Avast instellingen gedaan</label>
+        <label><input type="checkbox" name="Schijfopslag"> Schijfopslag geoptimaliseerd</label>
+        <label><input type="checkbox" name="partitiesnaamSDDHDD"> Partities hernoemd (SSD/HDD)</label>
+        <label><input type="checkbox" name="openshell"> Open-Shell geinstalleerd</label>
+        <label><input type="checkbox" name="FBCSSupremobureablad"> FBCS Supremobureablad ingesteld</label>
+        <label><input type="checkbox" name="Updates"> Alle updates uitgevoerd</label>
+        <label><input type="checkbox" name="Wifi6Settings"> Wifi 6 instellingen gedaan</label>
+        <label><input type="checkbox" name="DeliveryOptimization"> Delivery Optimization ingesteld</label>
+        <label><input type="checkbox" name="VeamAgent"> Veam Agent geinstalleerd</label>
+        <label><input type="checkbox" name="SchijfopruimingUitgevoerd"> Schijfopruiming uitgevoerd</label>
+        <label><input type="checkbox" name="FBCSOpstartMap"> FBCS Opstart Map ingesteld</label>
+        <label><input type="checkbox" name="ChromeFirefoxEdge"> Chrome, Firefox, Edge geinstalleerd</label>
+        <label><input type="checkbox" name="CoolerCleaning"> Koeler schoongemaakt</label>
+      </div>
+
+      <br> </br>
+
+      <div class="notities">
+        <textarea name="Notities" class="gegevensinput" placeholder="Notities"></textarea>
+      </div>
+
       <div class="options">
-        <p>Gebruikt</p> 	
-        <input type="date" name="dateout" class="gegevensinput" value="${today}">
-        <p>Initiaal</p>
+        <p>Behandeld door</p>
         <select name="initiaal" class="gegevensinput"> 
           ` + userOptions + `
         </select>
       </div>
+
+      <div class="status">
+        <p>Status</p>
+        <select name="Status" class="gegevensinput">
+          <option value="Niet gestart">Niet gestart</option>
+          <option value="In behandeling">In behandeling</option>
+          <option value="Afgerond">Behandeld</option>
+        </select>
+      </div>
+
       <div class="buttons">
         <button id="opslaan">Opslaan</button>
       </div>`
@@ -97,7 +137,31 @@ let renderUseCode = info => {
       pctype: "Laptop",
       pc: new String,
       dateout: today,
-      initiaal: "FB"
+      initiaal: "FB",
+      winver: false,
+      regedit: false,
+      antivirus: false,
+      office: false,
+      herstelpunt: false,
+      CCleanerMBAMKRVTAdwCleaner: false,
+      energiebeheer: false,
+      winactivated: false,
+      avastCodeActivation: false,
+      avastinstellingen: false,
+      Schijfopslag: false,
+      partitiesnaamSDDHDD: false,
+      openshell: false,
+      FBCSSupremobureablad: false,
+      Updates: false,
+      Wifi6Settings: false,
+      DeliveryOptimization: false,
+      VeamAgent: false,
+      SchijfopruimingUitgevoerd: false,
+      FBCSOpstartMap: false,
+      ChromeFirefoxEdge: false,
+      CoolerCleaning: false,
+      Notities: "",
+      Status : "Niet gestart"
     }
 
     // show the popup

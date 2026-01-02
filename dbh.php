@@ -1,7 +1,7 @@
 <?php
-$mysqlserver = "wf.mariadb";
-$mysqluser = "fbcs_nl";
-$mysqlpass = "763c1a02122f";
+$mysqlserver = "localhost";
+$mysqluser = "root";
+$mysqlpass = "";
 $mysqldb = "fbcs.nl_licenties_PHP";
 
 

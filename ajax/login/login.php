@@ -52,8 +52,8 @@ if ($result->num_rows == 0) {
 }
 
 $path = '/';
-$domain = 'licenties.fbcs.nl';
-$secure = true;
+$domain = '';
+$secure = false;
 
 $uuid = generateRandomString(64); //this will be the uuid/cookie
 
