@@ -21,7 +21,7 @@ require 'ajax/login/cookie.php';
 <!DOCTYPE html>
 <html>
 <head>
-<title>CRM FBCS</title>
+<title>CRM FBCS BEHEER</title>
 <link rel="icon" type="image/png" href="img/favicon.png">
 <!-- STYLESHEETS -->
 <link rel="stylesheet" type="text/css" href="css/shared.css">
@@ -56,7 +56,7 @@ require 'ajax/login/cookie.php';
 </div>
 
 <div id="center">
-	<div id="usecodediv"> 
+	<div id="usecodediv">
 		<div class="usecode">
 			<label for="type">Product</label>
 		</div>
