@@ -14,7 +14,31 @@ let gegevens = {
   initiaal: new String(),
   initiaalCode: new String(),
   aantal: new Number(),
-  ongeldig: new Boolean()
+  ongeldig: new Boolean(),
+  winver: false,
+  regedit: false,
+  antivirus: false,
+  office: false,
+  herstelpunt: false,
+  CCleanerMBAMKRVTAdwCleaner: false,
+  energiebeheer: false,
+  winactivated: false,
+  avastCodeActivation: false,
+  avastinstellingen: false,
+  Schijfopslag: false,
+  partitiesnaamSDDHDD: false,
+  openshell: false,
+  FBCSSupremobureablad: false,
+  Updates: false,
+  Wifi6Settings: false,
+  DeliveryOptimization: false,
+  VeamAgent: false,
+  SchijfopruimingUitgevoerd: false,
+  FBCSOpstartMap: false,
+  ChromeFirefoxEdge: false,
+  CoolerCleaning: false,
+  Notities: "",
+  Status : "Niet gestart"
 }
 /* vgm is dit bullshit
 $(document).ready(function() {
@@ -40,7 +64,7 @@ $(document).on('click', '#codes div', function() {
   if ($(this).attr('id') && !hoverCodeColumn) { // open if 'this' has a id and mouse is not over code div
     code = $(this).attr('id');
     showPopup = true;
-    
+
     getCodeInfo()
     .then(result => {
       if (result.editing === "1") { // do not continue if this product code is already being edited
@@ -160,9 +184,9 @@ $(document).on('click', '#editcode', function() {
                 <input type="text" name="code" id="editcode" value="${code.slice(0, -2)}" readonly>
                 <p>Product</p>
                 <input type="text" name="type" class="gegevensinput" value="${gegevens.type}">
-                <p>Ingekocht</p> 	
+                <p>Ingekocht</p>
                 <input type="date" name="datein" class="gegevensinput" value="${gegevens.datein}">
-                <p>Aantal</p> 	
+                <p>Aantal</p>
                 <input type="number" name="aantal" class="gegevensinput" value="${gegevens.aantal}"/>
                 <p>Initiaal</p>
                 <select name="initiaalCode" class="gegevensinput"> 
@@ -192,14 +216,14 @@ $(document).on('click', '#terug', function() {
 $(document).on('input', '.gegevensinput', function() {
   let key = $(this).attr('name');
   let value = $(this).val();
-  
+
   gegevens[key] = value;
 })
 
 /**
  * set editing column to false in database if still editing but the window closes for any reason
  */
-$(window).bind("beforeunload", function() { 
+$(window).bind("beforeunload", function() {
   toggleEditing();
 })
 
@@ -222,19 +246,19 @@ let renderOptions = () => {
                   <div/>
                   <input type="text" name="naam" class="gegevensinput" placeholder="Klant" value="${gegevens.naam}">
                   <p> PC </p>
-                  <select name="pctype" class="gegevensinput"> 
+                  <select name="pctype" class="gegevensinput">
                     <option value="Laptop">Laptop</option>
                     <option value="Kast">Kast</option>
                     <option value="AIO">AIO</option>
                   </select>
                   <div/>
-                  <input type="text" name="pc" class="gegevensinput" placeholder="PC" value="${gegevens.pc}"> 
+                  <input type="text" name="pc" class="gegevensinput" placeholder="PC" value="${gegevens.pc}">
                 </div>
                 <div class="options">
-                  <p>Gebruikt</p> 	
+                  <p>Gebruikt</p>
                   <input type="date" name="dateout" class="gegevensinput" value="${gegevens.dateout}">
                   <p>Initiaal</p>
-                  <select name="initiaal" class="gegevensinput"> 
+                  <select name="initiaal" class="gegevensinput">
                     ` + userOptions + `
                   </select>
                 </div>
@@ -244,7 +268,7 @@ let renderOptions = () => {
                 </div>`;
 
     // write the form to the html of the popup
-    $('#popup').html(form);        
+    $('#popup').html(form);
 
     // select the options from the resulst
     $(`select[name="aanhef"] option[value="${gegevens.aanhef}"]`).attr('selected', true);
@@ -273,7 +297,7 @@ let getCodeInfo = () => {
     success:function(response){
       data = JSON.parse(response)
       if (data.error) reject(data.error);
-      
+
       resolve(data)
     },
     error:function(err){
@@ -304,7 +328,7 @@ let saveCode = () => {
     success:function(response){
       data = JSON.parse(response)
       if (data.error) reject(data.error);
-      
+
       resolve()
     },
     error:function(err){
@@ -328,7 +352,7 @@ let toggleEditing = () => {
       success:function(response){
         data = JSON.parse(response)
         if (data.error) reject(data.error);
-        
+
         resolve()
       },
       error:function(err){
@@ -358,7 +382,7 @@ let toggleOngeldig = () => {
     success:function(response){
       data = JSON.parse(response)
       if (data.error) reject(data.error);
-      
+
       resolve()
     },
     error:function(err){
@@ -381,7 +405,7 @@ let deleteCode = () => {
     success:function(response){
       data = JSON.parse(response)
       if (data.error) reject(data.error);
-      
+
       resolve()
     },
     error:function(err){
