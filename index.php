@@ -58,9 +58,6 @@ require 'ajax/login/cookie.php';
 	<div id="usecodediv"> 
 		<div class="usecode">
 			<label for="type">Product</label>
-			<select name="type" id="usecodetype"></select>
-			<span id="codesleft"></span>
-			<button id="usecode">Gebruik Code</button>
 		</div>
 	</div>
 
@@ -79,7 +76,9 @@ require 'ajax/login/cookie.php';
 
 		</div>
 		<div class="filter-add">
-			<button id="newcode">Nieuwe Onderhoud</button>
+			<select name="type" id="usecodetype"></select>
+			<button id="usecode">Nieuwe Onderhoud</button>
+			<button id="newcode">Nieuwe PC klaarmaken</button>
 		</div>
 	</div>
 
