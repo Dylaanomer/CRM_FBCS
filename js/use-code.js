@@ -82,6 +82,32 @@ let renderUseCode = info => {
           ` + userOptions + `
         </select>
       </div>
+
+      <div class="checkboxes">
+        <label><input type="checkbox" name="winver"> Windows versie geinstalleerd</label>
+        <label><input type="checkbox" name="regedit"> Regedit uitgevoerd</label>
+        <label><input type="checkbox" name="antivirus"> Antivirus geinstalleerd</label>
+        <label><input type="checkbox" name="office"> Office geinstalleerd</label>
+        <label><input type="checkbox" name="herstelpunt"> Herstelpunt aangemaakt</label>
+        <label><input type="checkbox" name="CCleanerMBAMKRVTAdwCleaner"> CCleaner, MBAM, KRVT, AdwCleaner geinstalleerd</label>
+        <label><input type="checkbox" name="energiebeheer"> Energiebeheer ingesteld</label>
+        <label><input type="checkbox" name="winactivated"> Windows geactiveerd</label>
+        <label><input type="checkbox" name="avastinstellingen"> Avast instellingen gedaan</label>
+        <label><input type="checkbox" name="Schijfopslag"> Schijfopslag geoptimaliseerd</label>
+        <label><input type="checkbox" name="partitiesnaamSDDHDD"> Partities hernoemd (SSD/HDD)</label>
+        <label><input type="checkbox" name="openshell"> Open-Shell geinstalleerd</label>
+        <label><input type="checkbox" name="FBCSSupremobureablad"> FBCS Supremobureablad ingesteld</label>
+        <label><input type="checkbox" name="Updates"> Alle updates uitgevoerd</label>
+        <label><input type="checkbox" name="Wifi6Settings"> Wifi 6 instellingen gedaan</label>
+        <label><input type="checkbox" name="DeliveryOptimization"> Delivery Optimization ingesteld</label>
+        <label><input type="checkbox" name="VeamAgent"> Veam Agent geinstalleerd</label>
+        <label><input type="checkbox" name="SchijfopruimingUitgevoerd"> Schijfopruiming uitgevoerd</label>
+        <label><input type="checkbox" name="FBCSOpstartMap"> FBCS Opstart Map ingesteld</label>
+        <label><input type="checkbox" name="ChromeFirefoxEdge"> Chrome, Firefox, Edge geinstalleerd</label>
+        <label><input type="checkbox" name="CoolerCleaning"> Koeler schoongemaakt</label>
+      </div>
+
+
       <div class="buttons">
         <button id="opslaan">Opslaan</button>
       </div>`
@@ -97,7 +123,28 @@ let renderUseCode = info => {
       pctype: "Laptop",
       pc: new String,
       dateout: today,
-      initiaal: "FB"
+      initiaal: "FB",
+      winver: false,
+      regedit: false,
+      antivirus: false,
+      office: false,
+      herstelpunt: false,
+      CCleanerMBAMKRVTAdwCleaner: false,
+      energiebeheer: false,
+      winactivated: false,
+      avastinstellingen: false,
+      Schijfopslag: false,
+      partitiesnaamSDDHDD: false,
+      openshell: false,
+      FBCSSupremobureablad: false,
+      Updates: false,
+      Wifi6Settings: false,
+      DeliveryOptimization: false,
+      VeamAgent: false,
+      SchijfopruimingUitgevoerd: false,
+      FBCSOpstartMap: false,
+      ChromeFirefoxEdge: false,
+      CoolerCleaning: false
     }
 
     // show the popup
