@@ -46,14 +46,8 @@ let renderUseCode = info => {
   if (showPopup) {
     let form = `
     <div id="close"><span role="img" aria-label="close">&#x2716;</span></div>
-      <div class="popuptitle">Gebruik Code</div>
+      <div class="popuptitle">Checklist werkzaamheden computer</div>
       <div class="options">
-        <p>Code</p>
-        <input type="text" name="code" class="gegevensinput" value="${info.code.slice(0, -2)}" readonly>
-        <p>Product</p>
-        <input type="text" name="type" class="gegevensinput" value="${info.type}" readonly>
-        <p>Ingekocht</p> 	
-        <input type="date" name="datein" class="gegevensinput" value="${info.datein}" readonly>
       </div>
       <div class="gegevens">
         <p> Naam </p>
@@ -68,20 +62,13 @@ let renderUseCode = info => {
         <p> PC </p>
         <select name="pctype" class="gegevensinput"> 
           <option value="Laptop">Laptop</option>
-          <option value="Kast">Kast</option>
-          <option value="AIO">AIO</option>
+          <option value="Kast">PC</option>
+          <option value="AIO">Macbook</option>
           </select>
         <div/>
         <input type="text" name="pc" class="gegevensinput" placeholder="PC""> 
       </div>
-      <div class="options">
-        <p>Gebruikt</p> 	
-        <input type="date" name="dateout" class="gegevensinput" value="${today}">
-        <p>Initiaal</p>
-        <select name="initiaal" class="gegevensinput"> 
-          ` + userOptions + `
-        </select>
-      </div>
+    
 
       <div class="checkboxes">
         <label><input type="checkbox" name="winver"> Windows versie geinstalleerd</label>
@@ -105,6 +92,19 @@ let renderUseCode = info => {
         <label><input type="checkbox" name="FBCSOpstartMap"> FBCS Opstart Map ingesteld</label>
         <label><input type="checkbox" name="ChromeFirefoxEdge"> Chrome, Firefox, Edge geinstalleerd</label>
         <label><input type="checkbox" name="CoolerCleaning"> Koeler schoongemaakt</label>
+      </div>
+
+      <br> </br>
+
+      <div class="notities">
+        <textarea name="Notities" class="gegevensinput" placeholder="Notities"></textarea>
+      </div>
+
+      <div class="options">
+        <p>Behandeld door</p>
+        <select name="initiaal" class="gegevensinput"> 
+          ` + userOptions + `
+        </select>
       </div>
 
 
@@ -144,7 +144,8 @@ let renderUseCode = info => {
       SchijfopruimingUitgevoerd: false,
       FBCSOpstartMap: false,
       ChromeFirefoxEdge: false,
-      CoolerCleaning: false
+      CoolerCleaning: false,
+      Notities: ""
     }
 
     // show the popup
