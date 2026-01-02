@@ -39,7 +39,7 @@ require 'ajax/login/cookie.php';
 
 <body>
 <div id="nav">
-	<a class="nav" href="index.php"> <img src="img/fbcs.png" alt="kan het bestand niet vinden" id="logo"/> </a>
+	<a class="nav" href="index.php"> <img src="img/fbcs_hd_2.png" alt="kan het bestand niet vinden" id="logo"/> </a>
 	<ul class="nav">
 		<li class="nav"> <a class="nav active" href="index.php"> Onderhoud </a> </li>
 		<li class="nav"> <a class="nav" href="avast-old.php"> Nieuwe PC klaarmaken </a> </li>
