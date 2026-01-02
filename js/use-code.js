@@ -191,7 +191,7 @@ let getUsableCode = () => {
         if (data.error) reject(data.error);
 
         useCode = null; // reset the useCode variable, this will be set after this function or the window is closing
-        
+
         resolve(data)
       },
       error: function(err) { reject(err) }
@@ -233,7 +233,7 @@ let getCodesLeftForType = () => {
       success:function(response){
         data = JSON.parse(response)
         if (data.error) return console.error(data.error)
-        
+
         $('#codesleft').html("x"+data.aantal);
 
         return resolve()

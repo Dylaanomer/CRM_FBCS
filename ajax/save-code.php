@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 include 'dbh.php';
 
@@ -55,7 +55,7 @@ if ($ongeldig === "1") {
 	}
 
 	if ($result->num_rows > 0) {
-		$sql = "UPDATE gegevens 
+		$sql = "UPDATE gegevens
 						SET aanhef = '$aanhef',
 						naam = '$naam',
 						pctype = '$pctype',
@@ -76,17 +76,17 @@ if ($ongeldig === "1") {
 		if (!$conn->query($sql)) {
 			echoResponse("error", $sql.$conn->error);
 		}
-		
+
 		echoResponse("success", "code updated");
 	} else {
-		$sql = "INSERT INTO gegevens 
+		$sql = "INSERT INTO gegevens
 						(code,aanhef,naam,pctype,pc,initiaal,dateout)
 						VALUES
 						('$code', '$aanhef', '$naam', '$pctype', '$pc', '$initiaal', '$dateout');";
 		if (!$conn->query($sql)) {
 			echoResponse("error", $sql.$conn->error);
 		}
-		
+
 		echoResponse("success", "code added");
 	}
 }

@@ -10,9 +10,9 @@ require 'dbh.php';
 $code = addslashes($_GET['code']);
 
 $sql = "SELECT g.code, c.type, c.datein, g.aanhef, g.naam, g.pctype, g.pc, g.initiaal, g.dateout, g.editing, c.ongeldig, c.aantal, c.initiaal AS initiaalCode
-				FROM gegevens g 
-				INNER JOIN codes c ON 
-				c.code LIKE SUBSTRING(g.code, 1, CHAR_LENGTH(g.code) - 2) 
+				FROM gegevens g
+				INNER JOIN codes c ON
+				c.code LIKE SUBSTRING(g.code, 1, CHAR_LENGTH(g.code) - 2)
 				WHERE g.code = '$code';";
 
 if (!$result = $conn->query($sql)) {

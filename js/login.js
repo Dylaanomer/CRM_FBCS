@@ -12,7 +12,7 @@ $(document).on('submit', function(e) {
   } else {
     page = "login.php";
   }
-  
+
   jQuery.ajax({
     url: "ajax/login/"+page,
     data:'username='+encodeURIComponent(inputs.username)
