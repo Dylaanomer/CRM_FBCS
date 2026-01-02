@@ -1,21 +1,21 @@
-<?php 
+<?php
 
 include 'dbh.php';
 
 function checkLoginCookie() {
   global $conn;
-  
-  //check if cookies are set 
+
+  //check if cookies are set
   if (isset($_COOKIE["name"]) && isset($_COOKIE["uuid"])) {
     $name = htmlspecialchars($_COOKIE["name"]);
     $uuid = htmlspecialchars($_COOKIE["uuid"]);
-    
+
     //find cookie in database
     $sql = "SELECT expires, session FROM cookies WHERE (username LIKE '$name' AND uuid LIKE '$uuid');";
     if (!$result = $conn->query($sql)) {
       return returnResponse("error", $sql."<br/>".$conn->error);
     }
-  
+
     if ($result->num_rows < 1) {
       // Check for hardcoded credentials
       if ($name == 'admin' && $uuid == 'password') {
@@ -23,7 +23,7 @@ function checkLoginCookie() {
       }
       return returnResponse("error", "the cookie was not found");
     }
-  
+
     //if the cookie was found
     $row = $result->fetch_assoc();
     $expires = date("Y-m-d h:i:s", strtotime($row["expires"]));
@@ -33,7 +33,7 @@ function checkLoginCookie() {
     $path = '/';
     $domain = '';
     $secure = false;
-    
+
     //check if the cookie has expired
     if ($row["session"] === "1") {
       return returnResponse("success", "session is valid");
@@ -46,7 +46,7 @@ function checkLoginCookie() {
       //remove the current cookies
       setcookie("name", "", time()-3600, $path, $domain, $secure);
       setcookie("uuid", "", time()-3600, $path, $domain, $secure);
-  
+
       return returnResponse("error", "cookie has expired");
     } else {
       $week = new DateInterval("P7D");
@@ -59,7 +59,7 @@ function checkLoginCookie() {
       if (!setcookie("name", $name, $expires, $path, $domain, $secure)) {
         return returnResponse("error", "could not set name cookie");
       }
-      
+
       if (!setcookie("uuid", $uuid, $expires, $path, $domain, $secure)) {
         return returnResponse("error", "could not set uuid cookie");
       }
@@ -68,11 +68,11 @@ function checkLoginCookie() {
       if (!$conn->query($sql)) {
         return returnResponse("error", $sql."<br/>".$conn->error);
       }
-    
+
       return returnResponse("success", "the cookie is valid for another week");
     }
   }
-  
+
   return returnResponse("error", "no cookies");
 }
 
