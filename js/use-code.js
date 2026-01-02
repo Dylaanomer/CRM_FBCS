@@ -79,6 +79,12 @@ let renderUseCode = info => {
         <label><input type="checkbox" name="CCleanerMBAMKRVTAdwCleaner"> CCleaner, MBAM, KRVT, AdwCleaner geinstalleerd</label>
         <label><input type="checkbox" name="energiebeheer"> Energiebeheer ingesteld</label>
         <label><input type="checkbox" name="winactivated"> Windows geactiveerd</label>
+        <label><input type="checkbox" name="avastCodeActivation"> Avast code geactiveerd</label>
+        <br>
+        <small>
+        <a href="https://licenties.fbcs.nl" target="_blank" style="color: black; font-weight: bold; text-decoration: none;"> Link Website voor Avast code activatie</a>
+        </small>
+        <br>
         <label><input type="checkbox" name="avastinstellingen"> Avast instellingen gedaan</label>
         <label><input type="checkbox" name="Schijfopslag"> Schijfopslag geoptimaliseerd</label>
         <label><input type="checkbox" name="partitiesnaamSDDHDD"> Partities hernoemd (SSD/HDD)</label>
@@ -107,6 +113,14 @@ let renderUseCode = info => {
         </select>
       </div>
 
+      <div class="status">
+        <p>Status</p>
+        <select name="Status" class="gegevensinput">
+          <option value="Niet gestart">Niet gestart</option>
+          <option value="In behandeling">In behandeling</option>
+          <option value="Afgerond">Behandeld</option>
+        </select>
+      </div>
 
       <div class="buttons">
         <button id="opslaan">Opslaan</button>
@@ -132,6 +146,7 @@ let renderUseCode = info => {
       CCleanerMBAMKRVTAdwCleaner: false,
       energiebeheer: false,
       winactivated: false,
+      avastCodeActivation: false,
       avastinstellingen: false,
       Schijfopslag: false,
       partitiesnaamSDDHDD: false,
@@ -145,7 +160,8 @@ let renderUseCode = info => {
       FBCSOpstartMap: false,
       ChromeFirefoxEdge: false,
       CoolerCleaning: false,
-      Notities: ""
+      Notities: "",
+      Status : "Niet gestart"
     }
 
     // show the popup
