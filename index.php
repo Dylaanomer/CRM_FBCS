@@ -59,7 +59,7 @@ require 'ajax/login/cookie.php';
 <div id="center">
 	<div id="usecodediv">
 		<div class="usecode">
-			<label for="type">Product</label>
+			<label for="type">Onderhoud</label>
 		</div>
 	</div>
 
@@ -92,6 +92,7 @@ require 'ajax/login/cookie.php';
 			<div>Datum</div>
 			<div>OS</div>
 			<div>Avast Activeerd</div>
+			<div>Initiaal</div>
 		</div>
 		<div> <div> laden... </div> </div>
 	</div>

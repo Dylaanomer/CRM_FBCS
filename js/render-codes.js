@@ -15,6 +15,7 @@ const header = `
     <div>Datum</div>
     <div>OS</div>
     <div>Avast Activeerd</div>
+    <div>Initiaal></div>
   </div>`
 
   /**
