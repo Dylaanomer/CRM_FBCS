@@ -8,11 +8,13 @@ let oldestCode = new Date()
  */
 const header = `
   <div class="codes-header">
-    <div>Code</div>
-    <div class="tabletype">Product</div>
+    <div>Klant Naam</div>
+    <div class="tabletype">PC Naam</div>
     <div>Klant</div>
     <div>PC</div>
     <div>Datum</div>
+    <div>OS</div>
+    <div>Avast Activeerd</div>
   </div>`
 
 /**

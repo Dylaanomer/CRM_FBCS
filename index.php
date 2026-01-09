@@ -85,10 +85,12 @@ require 'ajax/login/cookie.php';
 
 	<div id="codes">
 		<div class="codes-header">
-			<div>Code</div>
+			<div>Klant Naam</div>
 			<div>Klant</div>
 			<div>PC</div>
 			<div>Datum</div>
+			<div>OS</div>
+			<div>Avast Activeerd</div>
 		</div>
 		<div> <div> laden... </div> </div>
 	</div>
