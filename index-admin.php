@@ -59,7 +59,7 @@ require 'ajax/login/cookie.php';
 <div id="center">
 	<div id="usecodediv">
 		<div class="usecode">
-			<label for="type">Product</label>
+			<label for="type">Beheer</label>
 		</div>
 	</div>
 
@@ -67,20 +67,6 @@ require 'ajax/login/cookie.php';
 	<div id="filter">
 		<div class="filter-search">
 			<input type="text" id="search-code" name="search" class="search" placeholder="Zoeken">
-		</div>
-		<div class="filter-type">
-			<input type="radio" id="avast" name="type" value="avast" checked>
-			<label for="avast">Windows</label><br/>
-			<input type="radio" id="office" name="type" value="office">
-			<label for="office">Macbook</label>
-			<input type="radio" id="anderen" name="type" value="anderen">
-			<label for="anderen">Anderen</label><br/>
-
-		</div>
-		<div class="filter-add">
-			<select name="type" id="usecodetype"></select>
-			<button id="usecode">Nieuwe Onderhoud</button>
-			<button id="newcode">Nieuwe PC klaarmaken</button>
 		</div>
 	</div>
 
