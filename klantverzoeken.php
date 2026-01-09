@@ -41,11 +41,11 @@ require 'ajax/login/cookie.php';
 <div id="nav">
 	<a class="nav" href="index.php"> <img src="img/fbcs_hd_2.png" alt="kan het bestand niet vinden" id="logo"/> </a>
 	<ul class="nav">
-		<li class="nav"> <a class="nav active" href="index.php"> Onderhoud </a> </li>
-		<li class="nav"> <a class="nav" href="avast-old.php"> Nieuwe PC klaarmaken </a> </li>
-		<li class="nav"> <a class="nav" href="office-old.php"> Overige Zaken </a> </li>
-		<li class="nav"> <a class="nav" href="klantverzoeken.php"> Klant Verzoeken </a></li>
-		<li class="nav"> <a class="nav" href="index-admin.php">Beheer</a> </li>
+		<li class="nav"> <a class="nav" href="index.php"> Onderhoud</a></li>
+		<li class="nav"> <a class="nav" href="avast-old.php"> Nieuwe PC klaarmaken </a></li>
+		<li class="nav"> <a class="nav active" href="klantverzoeken.php"> Klant Verzoeken </a></li>
+		<li class="nav"> <a class="nav" href="office-old.php"> Overige Zaken </a></li>
+		<li class="nav"> <a class="nav" href="index-admin.php">Beheer</a></li>
 		<li> <div class="login"> Welkom, <?php echo htmlspecialchars($_COOKIE["name"]); ?> <br>
 			<a id="logout" class="login" href="login/logout.php">Uitloggen</a>
 			</li>
@@ -59,7 +59,7 @@ require 'ajax/login/cookie.php';
 <div id="center">
 	<div id="usecodediv">
 		<div class="usecode">
-			<label for="type">Product</label>
+			<label for="type">Verzoeken</label>
 		</div>
 	</div>
 
@@ -68,35 +68,14 @@ require 'ajax/login/cookie.php';
 		<div class="filter-search">
 			<input type="text" id="search-code" name="search" class="search" placeholder="Zoeken">
 		</div>
-		<div class="filter-type">
-			<input type="radio" id="avast" name="type" value="avast" checked>
-			<label for="avast">Windows</label><br/>
-			<input type="radio" id="office" name="type" value="office">
-			<label for="office">Macbook</label>
-			<input type="radio" id="anderen" name="type" value="anderen">
-			<label for="anderen">Anderen</label><br/>
-
-		</div>
-		<div class="filter-add">
-			<select name="type" id="usecodetype"></select>
-			<button id="usecode">Nieuwe Onderhoud</button>
-			<button id="newcode">Nieuwe PC klaarmaken</button>
-		</div>
 	</div>
 
 	<div id="codes">
-		<div class="codes-header">
-			<div>Klant Naam</div>
-			<div>Klant</div>
-			<div>PC</div>
-			<div>Datum</div>
-			<div>OS</div>
-			<div>Avast Activeerd</div>
-		</div>
-		<div> <div> laden... </div> </div>
+	<div> Klant Naam </div>
+	<div> Verzoek </div>
+	<div> Status </div>
+	<div> <div> laden... </div> </div>
 	</div>
-
-<button id="loadmore"> Laad meer Onderhoudjes </button>
 
 <!---	<h1> Verwijder code uit database </h1>
 	<form method="post">
@@ -108,7 +87,7 @@ require 'ajax/login/cookie.php';
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/render-codes.js"></script>
+<script src="js/render-verzoeken.js"></script>
 <script src="js/edit-code.js"></script>
 <script src="js/add-code.js"></script>
 <script src="js/use-code.js"></script>

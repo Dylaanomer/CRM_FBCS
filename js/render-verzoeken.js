@@ -9,25 +9,9 @@ let oldestCode = new Date()
 const header = `
   <div class="codes-header">
     <div>Klant Naam</div>
-    <div class="tabletype">PC Naam</div>
-    <div>Klant</div>
-    <div>PC</div>
-    <div>Datum</div>
-    <div>OS</div>
-    <div>Avast Activeerd</div>
-  </div>`
-
-  /**
- * header for codes table
- */
-const header2 = `
-  <div class="verzoeken-header">
-    <div>Klant Naam</div>
-    <div class="tabletype">Verzoek</div>
+    <div>Verzoek</div>
     <div>Status</div>
   </div>`
-
-document.getElementById('codes').innerHTML = header2;
 
 /**
  * do this when document is ready
