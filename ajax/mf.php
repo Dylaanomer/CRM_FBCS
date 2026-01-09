@@ -7,39 +7,38 @@ error_reporting(E_ALL);
 $message =
 "If you ever need Negative SEO to de-rank any site, you can hire us here\n" .
 "https://www.speed-seo.net/product/negative-seo-service
-Hi, this is Chris. 
-Who win all online casinos by using FREE BONUS. 
- 
-Witch mean, I don’t really spend money in online casinos. 
- 
-But I win every time, and actually, everybody can win by following my directions. 
- 
-even you can win! 
- 
-So, if you’re the person, who can listen to someone really smart, you should just try!! 
- 
-The best online casino, that I really recommend is, Vera&John. 
-Established in 2010 and became best online casino in the world. 
- 
-They give you free bonus when you charge more than $50. 
-If you charge $50, your bonus is going to be $50. 
- 
-If you charge $500, you get $500 Free bonus. 
-You can bet up to $1000. 
- 
-Just try roulette, poker, black jack…any games with dealers. 
-Because dealers always have to make some to win and, only thing you need to do is to be chosen. 
- 
-Don’t ever spend your bonus at slot machines. 
-YOU’RE GONNA LOSE YOUR MONEY!! 
- 
-Next time, I will let you know how to win in online casino against dealers!! 
- 
-Don’t forget to open your VERA&JOHN account, otherwise you’re gonna miss even more chances!! 
- 
- 
- 
-Open Vera&John account (free) 
+Hi, this is Chris.
+Who win all online casinos by using FREE BONUS.
+
+Witch mean, I donï¿½t really spend money in online casinos.
+
+But I win every time, and actually, everybody can win by following my directions.
+
+even you can win!
+
+So, if youï¿½re the person, who can listen to someone really smart, you should just try!!
+
+The best online casino, that I really recommend is, Vera&John.
+Established in 2010 and became best online casino in the world.
+
+They give you free bonus when you charge more than $50.
+If you charge $50, your bonus is going to be $50.
+
+If you charge $500, you get $500 Free bonus.
+You can bet up to $1000.
+
+Just try roulette, poker, black jackï¿½any games with dealers.
+Because dealers always have to make some to win and, only thing you need to do is to be chosen.
+
+Donï¿½t ever spend your bonus at slot machines.
+YOUï¿½RE GONNA LOSE YOUR MONEY!!
+
+Next time, I will let you know how to win in online casino against dealers!!
+
+Donï¿½t forget to open your VERA&JOHN account, otherwise youï¿½re gonna miss even more chances!!
+
+
+Open Vera&John account (free)
 https://bit.ly/3wZkpco
 
 Hi, this is Anna. I am sending you my intimate photos as I promised. https://tinyurl.com/yhexa7ln
@@ -64,7 +63,7 @@ echo $message . "<br/>\n";
     // foreach($matches[0] as $match) {
       $match = $matches[0][$i];
       $match_host = $matches[2][$i];
-      // // remove 
+      // // remove
       // if (strpos($match, "https://")) $match = substr($match, 8);
       // else $match = ltrim($match, " \n\t\v\r\0\"'");
 

@@ -37,6 +37,7 @@ $(document).on('click', '#usecode', function() {
   })
 })
 
+
 /**
  * Render the popup to use a code
  * 
@@ -122,9 +123,13 @@ let renderUseCode = info => {
         </select>
       </div>
 
+
       <div class="buttons">
         <button id="opslaan">Opslaan</button>
+        <button type="button" id="close">Sluiten</button>
       </div>`
+
+
 
     // write the form to the html of the popup
     $('#popup').html(form);
@@ -191,7 +196,7 @@ let getUsableCode = () => {
         if (data.error) reject(data.error);
 
         useCode = null; // reset the useCode variable, this will be set after this function or the window is closing
-        
+
         resolve(data)
       },
       error: function(err) { reject(err) }
@@ -233,7 +238,7 @@ let getCodesLeftForType = () => {
       success:function(response){
         data = JSON.parse(response)
         if (data.error) return console.error(data.error)
-        
+
         $('#codesleft').html("x"+data.aantal);
 
         return resolve()

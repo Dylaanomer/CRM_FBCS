@@ -21,7 +21,7 @@ require 'ajax/login/cookie.php';
 <!DOCTYPE html>
 <html>
 <head>
-<title>CRM FBCS</title>
+<title>CRM FBCS BEHEER</title>
 <link rel="icon" type="image/png" href="img/favicon.png">
 <!-- STYLESHEETS -->
 <link rel="stylesheet" type="text/css" href="css/shared.css">
@@ -39,13 +39,13 @@ require 'ajax/login/cookie.php';
 
 <body>
 <div id="nav">
-	<a class="nav" href="index.php"> <img src="img/fbcs_hd_2.png" alt="kan het bestand niet vinden" id="logo"/> </a>
+	<a class="nav" href="index.php"> <img src="img/fbcs.png" alt="kan het bestand niet vinden" id="logo"/> </a>
 	<ul class="nav">
-		<li class="nav"> <a class="nav active" href="index.php"> Onderhoud </a> </li>
+		<li class="nav"> <a class="nav" href="index.php"> Onderhoud </a> </li>
 		<li class="nav"> <a class="nav" href="avast-old.php"> Nieuwe PC klaarmaken </a> </li>
 		<li class="nav"> <a class="nav" href="office-old.php"> Overige Zaken </a> </li>
 		<li class="nav"> <a class="nav" href="klantverzoeken.php"> Klant Verzoeken </a></li>
-		<li class="nav"> <a class="nav" href="index-admin.php">Beheer</a> </li>
+		<li class="nav"> <a class="nav active" href="index-admin.php">Beheer</a> </li>
 		<li> <div class="login"> Welkom, <?php echo htmlspecialchars($_COOKIE["name"]); ?> <br>
 			<a id="logout" class="login" href="login/logout.php">Uitloggen</a>
 			</li>
@@ -86,12 +86,10 @@ require 'ajax/login/cookie.php';
 
 	<div id="codes">
 		<div class="codes-header">
-			<div>Klant Naam</div>
+			<div>Code</div>
 			<div>Klant</div>
 			<div>PC</div>
 			<div>Datum</div>
-			<div>OS</div>
-			<div>Avast Activeerd</div>
 		</div>
 		<div> <div> laden... </div> </div>
 	</div>

@@ -141,7 +141,7 @@ class mail_filter {
     // foreach($matches[0] as $match) {
       $match = $matches[0][$i];
       $match_host = $matches[2][$i];
-      // // remove 
+      // // remove
       // if (strpos($match, "https://")) $match = substr($match, 8);
       // else $match = ltrim($match, " \n\t\v\r\0\"'");
 
