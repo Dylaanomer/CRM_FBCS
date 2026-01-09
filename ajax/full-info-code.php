@@ -9,7 +9,7 @@ require 'dbh.php';
 
 $code = addslashes($_GET['code']);
 
-$sql = "SELECT g.code, c.type, c.datein, g.aanhef, g.naam, g.pctype, g.pc, g.initiaal, g.dateout, g.editing, c.ongeldig, c.aantal, c.initiaal AS initiaalCode
+$sql = "SELECT g.code, c.type, c.datein, g.aanhef, g.naam, g.pctype, g.pc, g.initiaal, g.dateout, g.editing, c.ongeldig, c.aantal, g.winver, g.regedit, g.antivirus, g.office, g.herstelpunt, g.CCleanerMBAMKRVTAdwCleaner, c.initiaal AS initiaalCode
 				FROM gegevens g
 				INNER JOIN codes c ON
 				c.code LIKE SUBSTRING(g.code, 1, CHAR_LENGTH(g.code) - 2)
@@ -33,7 +33,13 @@ if ($result->num_rows > 0) {
 									'dateout' => $row['dateout'],
 									'editing' => $row['editing'],
 									'ongeldig' => $row['ongeldig'],
-									'aantal' => $row['aantal'],
+									'aantal' => $row['aantal']
+									,'winver' => $row['winver'],
+									'regedit' => $row['regedit'],
+									'antivirus' => $row['antivirus'],
+									'office' => $row['office'],
+									'herstelpunt' => $row['herstelpunt'],
+									'CCleanerMBAMKRVTAdwCleaner' => $row['CCCleanerMBAMKRVTAdwCleaner'],
 									'initiaalCode' => $row['initiaalCode']);
 
 	echoResponse('success', $arr);

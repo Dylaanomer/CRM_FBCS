@@ -16,7 +16,7 @@ if (!$code || !$type || !$datein || !$aantal || !$initiaal) {
   echoResponse('error', 'empty parameter');
 }
 
-$insert = "INSERT INTO codes (code,type,datein,aantal,initiaal) VALUES ('$code','$type','$datein','$aantal','$initiaal');";
+$insert = "INSERT INTO codes (code,type,datein,aantal,initiaal,winver,regedit,antivirus,office,herstelpunt,CCleanerMBAMKRVTAdwCleaner) VALUES ('$code','$type','$datein','$aantal','$initiaal',0,0,0,0,0,0);";
 
 if (!$conn->query($insert)) {
   echoResponse('error', $sql.$conn->error);
