@@ -72,22 +72,23 @@ let renderNewCode = () => {
         <label><input type="checkbox" name="CoolerCleaning"> Koeler schoongemaakt</label>
 
          <p>Initiaal</p>
-                  <select name="initiaal" class="newcodeinput"> 
+                  <select name="initiaal" class="newcodeinput">
                     ` + userOptions + `
                   </select>
 
          <div class="notities">
                   <p> Notities </p>
                   <textarea name="Notities" class="newcodeinput" placeholder="Notities"></textarea>
-      
-                </div>         
+
+                </div>
       </div>
-              
-                
-      
+
+
+
                 </div>
                 <div class="buttons">
                   <button id="toevoegen">Toevoegen</button>
+                  <button type="button" id="close">Sluiten</button>
                 </div>`;
 
     newCode = {

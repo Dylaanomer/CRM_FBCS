@@ -37,6 +37,7 @@ $(document).on('click', '#usecode', function() {
   })
 })
 
+
 /**
  * Render the popup to use a code
  * 
@@ -122,9 +123,13 @@ let renderUseCode = info => {
         </select>
       </div>
 
+
       <div class="buttons">
         <button id="opslaan">Opslaan</button>
+        <button type="button" id="close">Sluiten</button>
       </div>`
+
+
 
     // write the form to the html of the popup
     $('#popup').html(form);

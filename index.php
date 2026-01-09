@@ -56,7 +56,7 @@ require 'ajax/login/cookie.php';
 </div>
 
 <div id="center">
-	<div id="usecodediv"> 
+	<div id="usecodediv">
 		<div class="usecode">
 			<label for="type">Product</label>
 		</div>
