@@ -10,12 +10,11 @@ const header = `
   <div class="codes-header">
     <div>Klant Naam</div>
     <div class="tabletype">PC Naam</div>
-    <div>Klant</div>
-    <div>PC</div>
     <div>Datum</div>
     <div>OS</div>
     <div>Avast Activeerd</div>
     <div>Initiaal</div>
+    <div>Status</div>
   </div>`
 
   /**
