@@ -41,10 +41,10 @@ require 'ajax/login/cookie.php';
 <div id="nav">
 	<a class="nav" href="index.php"> <img src="img/fbcs.png" alt="kan het bestand niet vinden" id="logo"/> </a>
 	<ul class="nav">
-		<li class="nav"> <a class="nav active" href="index-onderhoud.php"> Onderhoud </a> </li>
+		<li class="nav"> <a class="nav" href="index-onderhoud.php"> Onderhoud </a> </li>
 		<li class="nav"> <a class="nav" href="index-pc.php"> Nieuwe PC klaarmaken </a> </li>
 		<li class="nav"> <a class="nav" href="klantverzoeken.php"> Klant Verzoeken </a></li>
-		<li class="nav"> <a class="nav" href="index-admin.php">Beheer</a> </li>
+		<li class="nav"> <a class="nav active" href="index-admin.php">Beheer</a> </li>
 		<li> <div class="login"> Welkom, <?php echo htmlspecialchars($_COOKIE["name"]); ?> <br>
 			<a id="logout" class="login" href="login/logout.php">Uitloggen</a>
 			</li>
