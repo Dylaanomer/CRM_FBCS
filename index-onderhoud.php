@@ -21,7 +21,7 @@ require 'ajax/login/cookie.php';
 <!DOCTYPE html>
 <html>
 <head>
-<title>CRM FBCS BEHEER</title>
+<title>CRM FBCS</title>
 <link rel="icon" type="image/png" href="img/favicon.png">
 <!-- STYLESHEETS -->
 <link rel="stylesheet" type="text/css" href="css/shared.css">
@@ -39,7 +39,7 @@ require 'ajax/login/cookie.php';
 
 <body>
 <div id="nav">
-	<a class="nav" href="index.php"> <img src="img/fbcs.png" alt="kan het bestand niet vinden" id="logo"/> </a>
+	<a class="nav" href="index.php"> <img src="img/fbcs_hd_2.png" alt="kan het bestand niet vinden" id="logo"/> </a>
 	<ul class="nav">
 		<li class="nav"> <a class="nav active" href="index-onderhoud.php"> Onderhoud </a> </li>
 		<li class="nav"> <a class="nav" href="index-pc.php"> Nieuwe PC klaarmaken </a> </li>
@@ -58,7 +58,7 @@ require 'ajax/login/cookie.php';
 <div id="center">
 	<div id="usecodediv">
 		<div class="usecode">
-			<label for="type">Beheer</label>
+			<label for="type">Onderhoud</label>
 		</div>
 	</div>
 
@@ -67,14 +67,31 @@ require 'ajax/login/cookie.php';
 		<div class="filter-search">
 			<input type="text" id="search-code" name="search" class="search" placeholder="Zoeken">
 		</div>
+		<div class="filter-type">
+			<input type="radio" id="avast" name="type" value="avast" checked>
+			<label for="avast">Windows</label><br/>
+			<input type="radio" id="office" name="type" value="office">
+			<label for="office">Macbook</label>
+			<input type="radio" id="anderen" name="type" value="anderen">
+			<label for="anderen">Anderen</label><br/>
+
+		</div>
+		<div class="filter-add">
+			<select name="type" id="usecodetype"></select>
+			<button id="usecode">Nieuwe Onderhoud</button>
+			<button id="newcode">Nieuwe PC klaarmaken</button>
+		</div>
 	</div>
 
 	<div id="codes">
 		<div class="codes-header">
-			<div>Code</div>
-			<div>Klant</div>
+			<div>Klant Naam</div>
 			<div>PC</div>
 			<div>Datum</div>
+			<div>OS</div>
+			<div>Avast Activeerd</div>
+			<div>Initiaal</div>
+			<div>Status</div>
 		</div>
 		<div> <div> laden... </div> </div>
 	</div>

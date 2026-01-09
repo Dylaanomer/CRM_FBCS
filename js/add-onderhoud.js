@@ -36,7 +36,7 @@ $(document).on('click', '#toevoegen', function() {
 $(document).on('input', '.newcodeinput', function() {
   let key = $(this).attr('name');
   let value = $(this).val();
-  
+
   newCode[key] = value;
 })
 

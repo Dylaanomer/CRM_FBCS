@@ -41,9 +41,8 @@ require 'ajax/login/cookie.php';
 <div id="nav">
 	<a class="nav" href="index.php"> <img src="img/fbcs_hd_2.png" alt="kan het bestand niet vinden" id="logo"/> </a>
 	<ul class="nav">
-		<li class="nav"> <a class="nav active" href="index.php"> Onderhoud </a> </li>
-		<li class="nav"> <a class="nav" href="avast-old.php"> Nieuwe PC klaarmaken </a> </li>
-		<li class="nav"> <a class="nav" href="office-old.php"> Overige Zaken </a> </li>
+		<li class="nav"> <a class="nav active" href="index-onderhoud.php"> Onderhoud </a> </li>
+		<li class="nav"> <a class="nav" href="index-pc.php"> Nieuwe PC klaarmaken </a> </li>
 		<li class="nav"> <a class="nav" href="klantverzoeken.php"> Klant Verzoeken </a></li>
 		<li class="nav"> <a class="nav" href="index-admin.php">Beheer</a> </li>
 		<li> <div class="login"> Welkom, <?php echo htmlspecialchars($_COOKIE["name"]); ?> <br>
@@ -109,9 +108,9 @@ require 'ajax/login/cookie.php';
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/render-codes.js"></script>
-<script src="js/edit-code.js"></script>
-<script src="js/add-code.js"></script>
+<script src="js/render-data.js"></script>
+<script src="js/edit-onderhoud.js"></script>
+<script src="js/add-onderhoud.js"></script>
 <script src="js/use-code.js"></script>
 <script src="js/user-options.js"></script>
 
